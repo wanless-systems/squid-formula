@@ -9,6 +9,14 @@ squid_pkgs:
       - {{ pkg }}
       {% endfor %}
 
+/var/spool/squid3/cache:
+  file.directory:
+    - user: squid
+    - group: squid
+    - dir_mode: 755
+    - file_mode: 644
+    - makedirs: true
+
 squid_service:
   service.running:
     - name: {{ map.service }}
