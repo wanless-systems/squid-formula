@@ -12,8 +12,8 @@ squid_pkgs:
 
 /var/spool/squid3/cache:
   file.directory:
-    - user: squid 
-    - group: squid 
+    - user: squid
+    - group: squid
     - dir_mode: 755
     - file_mode: 644
     - makedirs: true
